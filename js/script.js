@@ -1,23 +1,17 @@
 $(document).ready(function(){
-  changeViewBtn();
+  changeView();
 })
 
-function changeViewBtn(){
-  const btn = $('.btn_change_view');
+function changeView(){
+  const changeBtn = $('.btn_change_view');
   const layer = $('.layer');
-  const isActive = "active";
+  const isActive = 'active';
 
-  $(btn).click(function(){
-    let btnText = $(this).text();
-    if(btnText === '데이터 수정') {
-      $(btn).text('프리뷰');
-      $(layer).removeClass(isActive);
-      $(layer).eq(1).addClass(isActive);
-    } else {
-      $(btn).text('데이터 수정');
-      $(layer).removeClass(isActive);
-      $(layer).eq(0).addClass(isActive);
-    }
+  $(changeBtn).click(function(){
+    $(this).addClass(isActive).parent().siblings().find(changeBtn).removeClass(isActive);
+    const btnIndex = $(this).parent().index();
+    
+    $(layer).eq(btnIndex).addClass(isActive).siblings().removeClass(isActive);
   })
 }
 

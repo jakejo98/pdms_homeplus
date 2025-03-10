@@ -23,7 +23,19 @@
         <strong class="company_title">PDMS <span class="company_sub_title">Homeplus</span></strong>
       </div>
       <div class="header_right">
-        <button type="button" class="btn_change_view">데이터 수정</button>
+        <div class="change_view">
+          <ul class="change_view_list">
+            <li class="change_view_item">
+              <button type="button" class="btn_change_view active">대시보드</button>
+            </li>
+            <li class="change_view_item">
+              <button type="button" class="btn_change_view">디자인 현황</button>
+            </li>
+            <li class="change_view_item">
+              <button type="button" class="btn_change_view">디자인 요청</button>
+            </li>
+          </ul>
+        </div>
         <h1 class="logo"> 
           <a href="http://pushcomz.com/" class="logo_link"></a>
         </h1>
@@ -32,13 +44,17 @@
   </div>
   <main class="common_container" role="main">
     <section class="common_section section_sheet">
-      <!-- 프리뷰 기능 -->
+      <!-- 대시보드 (프리뷰) -->
       <div class="layer active">
         <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/preview" class="sheet_iframe"></iframe>
       </div>
-      <!-- 에디터 기능 -->
+      <!-- 디자인현황 (프리뷰) -->
       <div class="layer">
-        <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/edit?gid=2031962374&rm=minimal" class="sheet_iframe"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/preview?gid=0#gid=0" class="sheet_iframe"></iframe>
+      </div>
+      <!-- 디자인 요청 (에디터) -->
+      <div class="layer">
+        <iframe src="https://docs.google.com/spreadsheets/d/1kCAv74YFIwRxX9mL9n4ro2kHNjEMg4H143Z72QWfITI/edit?usp=sharing?gid=0&rm=minimal" class="sheet_iframe"></iframe>
       </div>
     </section>
   </main>
