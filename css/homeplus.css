@@ -5,6 +5,7 @@ body {
 
 /* header */
 #header {
+  position: relative;
   background-color: #073863;
 }
 
@@ -22,33 +23,6 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
-}
-
-.change_view_list {
-  display: flex;
-  gap: 8px;
-}
-
-.btn_change_view {
-  padding: 6px 12px;
-  border-radius: 16px;
-  background-color: #666666;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #FEFEFE;
-  cursor: pointer;
-  transition: 0.3s all ease;
-}
-
-.btn_change_view:hover {
-  background-color: #333333;
-  color: #FFFFFF;
-}
-
-.btn_change_view.active {
-  background-color: #333333;
-  color: #FFFFFF;
 }
 
 .logo {
@@ -100,6 +74,15 @@ body {
   display: block;
 }
 
+.chatting_link {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 100px;
+  height: 100px;
+  background: url('/pdms_homeplus/img/chatting.svg') no-repeat;
+}
+
 /* footer */
 #footer {
   background-color: #333333;
@@ -118,4 +101,84 @@ body {
   line-height: 20px;
   color: #FFFFFF;
   text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .change_view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn_change_view_expanded {
+    position: relative;
+    width: 100px;
+    padding: 6px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+  .btn_change_view_expanded::after {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    background: url('/pdms_homeplus/img/change_view_arrow.svg') no-repeat;
+    transform: translateY(-50%);
+    content: '';
+  }
+  .change_view_list {
+    display: none;
+    position: absolute;
+    top: 32px;
+    border: 1px solid #DDDDDD;
+    z-index: 100;
+  }
+  .change_view_list.expanded {
+    display: block;
+  }
+  .change_view_item:not(:last-of-type) {
+    border-bottom: 1px solid #DDDDDD;
+  }
+  .btn_change_view {
+    width: 100px;
+    padding: 6px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    background-color: #F6F6F6;
+    color: #333333;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_change_view_expanded {
+    display: none;
+  }
+  .change_view_list {
+    display: flex;
+    gap: 8px;
+  }
+  .btn_change_view {
+    padding: 6px 12px;
+    border-radius: 16px;
+    background-color: #666666;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FEFEFE;
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+  .btn_change_view:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+  }
+  .btn_change_view.active {
+    background-color: #333333;
+    color: #FFFFFF;
+  }
 }
