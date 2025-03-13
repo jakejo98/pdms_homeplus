@@ -63,7 +63,18 @@ body {
 
 .sheet_iframe {
   width: 100%;
-  height: calc(100vh - 120px);
+}
+
+@media screen and (max-width: 1023px) {
+  .sheet_iframe {
+    height: calc(100vh - 180px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sheet_iframe {
+    height: calc(100vh - 120px);
+  }
 }
 
 .layer {
