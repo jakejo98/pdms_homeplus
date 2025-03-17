@@ -27,38 +27,38 @@
           <button class="btn_change_view_expanded">운영현황</button>
           <ul class="change_view_list">
             <li class="change_view_item">
-              <button type="button" class="btn_change_view active">디자인 요청</button>
+              <button type="button" class="btn_change_view active">전체현황</button>
+            </li>
+            <li class="change_view_item">
+              <button type="button" class="btn_change_view">디자인 요청</button>
             </li>
             <li class="change_view_item">
               <button type="button" class="btn_change_view">요청리스트</button>
-            </li>
-            <li class="change_view_item">
-              <button type="button" class="btn_change_view">전체현황</button>
             </li>
             <li class="change_view_item">
               <button type="button" class="btn_change_view">담당자 정보</button>
             </li>
           </ul>
         </div>
-        <h1 class="logo"> 
-          <a href="http://pushcomz.com/" class="logo_link"></a>
+        <h1 class="logo">
+          <span class="blind">홈플러스</span>
         </h1>
       </div>
     </div>
   </div>
   <main class="common_container" role="main">
     <section class="common_section section_sheet">
-      <!-- 디자인 요청 (에디터) -->
+      <!-- 전체현황 (프리뷰) -->
       <div class="layer active">
+        <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/preview" class="sheet_iframe"></iframe>
+      </div>
+      <!-- 디자인 요청 (에디터) -->
+      <div class="layer">
         <iframe src="https://docs.google.com/spreadsheets/d/1kCAv74YFIwRxX9mL9n4ro2kHNjEMg4H143Z72QWfITI/edit?usp=sharing?gid=0&rm=minimal" class="sheet_iframe"></iframe>
       </div>
       <!-- 요청리스트 (프리뷰) -->
       <div class="layer">
         <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/preview?gid=0#gid=0" class="sheet_iframe"></iframe>
-      </div>
-      <!-- 전체현황 (프리뷰) -->
-      <div class="layer">
-        <iframe src="https://docs.google.com/spreadsheets/d/1H8kAvEcD3QQp2mfo-EVjKOUFTSSmagK2ZF9chMQGWBM/preview" class="sheet_iframe"></iframe>
       </div>
       <!-- 담당자 정보 (프리뷰) -->
       <div class="layer">

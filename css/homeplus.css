@@ -26,14 +26,11 @@ body {
 }
 
 .logo {
-  font-size: 0px;
-}
-
-.logo_link {
   position: relative;
-  width: 95px;
-  height: 30px;
+  width: 150px;
+  height: 33px;
   background: url('/pdms_homeplus/img/logo.svg') no-repeat;
+  font-size: 0px;
 }
 
 .company_title {
@@ -189,7 +186,7 @@ body {
     color: #FFFFFF;
   }
   .btn_change_view.active {
-    background-color: #333333;
+    background-color: #EA4335;
     color: #FFFFFF;
   }
 }
